@@ -14,7 +14,7 @@ fullnameOverride: ""
 
 service:
   type: ClusterIP
-  port: 3010
+  port: 80
 
 freshrss:
   cron_min:

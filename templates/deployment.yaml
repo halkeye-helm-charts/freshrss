@@ -28,7 +28,7 @@ spec:
               value: {{ join "," .Values.freshrss.cron_min | quote }}
           ports:
             - name: http
-              containerPort: 3010
+              containerPort: 80
               protocol: TCP
           livenessProbe:
             httpGet:
