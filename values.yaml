@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: freshrss/freshrss
-  tag: 1.13.1
+  tag: 1.14.2
   pullPolicy: IfNotPresent
 
 nameOverride: ""
