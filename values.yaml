@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: freshrss/freshrss
-  tag: 1.14.2
+  tag: "{{ .Chart.AppVersion }}"
   pullPolicy: IfNotPresent
 
 nameOverride: ""
