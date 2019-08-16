@@ -4,10 +4,10 @@ kind: PersistentVolumeClaim
 metadata:
   name: {{ template "freshrss.fullname" . }}
   labels:
-    app: {{ template "freshrss.name" . }}
-    chart: {{ template "freshrss.chart" . }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
+    app.kubernetes.io/name: {{ include "freshrss.name" . }}
+    helm.sh/chart: {{ include "freshrss.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
   {{- with .Values.persistence.annotations  }}
   annotations:
 {{ toYaml . | indent 4 }}
